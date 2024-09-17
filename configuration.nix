@@ -100,15 +100,17 @@
       enable = true;
       plugins = [ 
       "git" 
-      "zsh-history-substring-search"
-
-      {
-        name = "zsh-powerlevel10k";
-        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
-        file = "powerlevel10k.zsh-theme";
-      }
+      # "zsh-history-substring-search"
       ];
     };
+  };
+
+  programs.git = {
+    enable = true;
+    user = {
+      name = "Mark Pendlebury";
+    };
+    # email = "mark.pendlebury@elesoft.dev";
   };
 
   # Allow unfree packages
