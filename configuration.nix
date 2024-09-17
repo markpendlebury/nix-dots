@@ -107,10 +107,6 @@
 
   programs.git = {
     enable = true;
-    user = {
-      name = "Mark Pendlebury";
-    };
-    # email = "mark.pendlebury@elesoft.dev";
   };
 
   # Allow unfree packages
