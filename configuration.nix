@@ -89,10 +89,23 @@
 
   programs.zsh = {
     enable = true;
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    # autoCompletion = true;
+    # autosuggestions.enable = true;
+    # syntaxHighlighting.enable = true;    
+    # ohMyZsh = {
+    #   enable = true;
+    #   theme = "powerlevel10k";
+    #   plugins = [];
+    # };
+    shellAliases = {
+      update = "sudo nixos-rebuild switch";
+    };
+
     ohMyZsh = {
       enable = true;
+      plugins = [ "git"  "thefuck" ];
       theme = "powerlevel10k";
-      plugins = [];
     };
   };
 
