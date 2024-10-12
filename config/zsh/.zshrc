@@ -9,8 +9,6 @@ fi
 
 reloadbash() {
   
-
-  # source $ZSH="$HOME/.oh-my-zsh"
   # Enable auto expansion of parameters and variables:
   zstyle ':completion:*' completer _expand _complete
   autoload -Uz compinit
@@ -31,7 +29,6 @@ reloadbash() {
 
   SSH_PASSPHRASE=$(cat ~/.scripts/non-commit/passfile)
 
-  { sleep .1; echo $SSH_PASSPHRASE; } | script -q /dev/null -c 'ssh-add ~/.ssh/keys/github-elesoft-bjss' &> /dev/null
 
 }
 
