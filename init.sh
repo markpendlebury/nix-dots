@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIGS=("btop" "helix" "hypr" "kitty" "neofetch" "scripts" "vscode" "wallpapers" "zsh")
+CONFIGS=("btop/themes" "helix" "hypr" "kitty" "neofetch" "scripts" "vscode" "wallpapers" "zsh/themes")
 
 echo "Creating config directories if they don't exist..."
 
@@ -11,7 +11,6 @@ echo "Done!"
 
 echo "Linking dotfiles..."
 sudo ln -sf $PWD/nixos/configuration.nix /etc/nixos/configuration.nix
-sudo ln -sf $PWD/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 sudo mkdir -p /etc/nixos/zsh
 sudo ln -sf $PWD/nixos/zsh/default.nix /etc/nixos/zsh/default.nix
 ln -sf $PWD/config/btop/btop.conf ~/.config/btop/btop.conf

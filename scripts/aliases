@@ -34,4 +34,4 @@ hashicorp.version() {
 # pyenv
 alias pyenv='python -m venv .venv && source .venv/bin/activate'
 
-alias hx=helix
+
