@@ -70,11 +70,7 @@
     NIXOS_OZONE_WL = "1";
     SUDO_EDITOR = "hx";
   };
-  
-    
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
+      
   # Enable sound with pipewire.
   # hardware.pulseaudio.enable = false;
   # security.rtkit.enable = true;
@@ -102,6 +98,7 @@
     shell = pkgs.zsh;
     # shell = pkgs.bash;
     packages = with pkgs; [
+      helix
       btop
       kitty
       lazygit
@@ -113,8 +110,10 @@
 
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "mpendlebury";
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "mpendlebury";
+  };
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
@@ -128,28 +127,12 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  helix
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  environment.systemPackages = with pkgs; [];
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
