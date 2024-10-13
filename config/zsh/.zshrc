@@ -5,34 +5,20 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# export PATH=$PATH:/run/current-system/sw/bin/
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt extendedglob
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/mpendlebury/.zshrc'
 
-reloadbash() {
-  
-  # Enable auto expansion of parameters and variables:
-  zstyle ':completion:*' completer _expand _complete
-  autoload -Uz compinit
-  compinit
-
-  SAVEHIST=1000 # Save most-recent 1000 lines
-  HISTFILE=~/.zsh_history
-
-  for script in ~/.scripts/*; do
-    source $script
-  done
-
-  for script in ~/.scripts/non-commit/*; do
-    # source $script
-  done
-
-  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-
-  SSH_PASSPHRASE=$(cat ~/.scripts/non-commit/passfile)
-
-
-}
-
-reloadbash
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

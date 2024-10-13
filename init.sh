@@ -23,9 +23,9 @@ ln -sf $PWD/config/hypr/hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 ln -sf $PWD/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf $PWD/config/neofetch/config.conf ~/.config/neofetch/config.conf
 ln -sf $PWD/config/zsh/.zshrc ~/.zshrc
+ln -sf $PWD/config/zsh/themes/gruvbox.zsh-theme ~/.config/zsh/themes/gruvbox.zsh-theme
 mkdir -p ~/.scripts/non-exec
 ln -sf $PWD/scripts/aliases ~/.scripts/aliases
 ln -sf $PWD/scripts/terraform ~/.scripts/terraform
 
 echo "Done!"
-

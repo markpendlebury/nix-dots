@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # ./zsh/default.nix
+      ./zsh/default.nix
     ];
 
   # Bootloader.
@@ -99,8 +99,8 @@
     isNormalUser = true;
     description = "Mark Pendlebury";
     extraGroups = [ "networkmanager" "wheel" ];
-    # shell = pkgs.zsh;
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
+    # shell = pkgs.bash;
     packages = with pkgs; [
       btop
       kitty
@@ -111,7 +111,6 @@
     ];
   };
 
-  programs.zsh.enable = true;
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
