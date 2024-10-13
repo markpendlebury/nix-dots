@@ -20,6 +20,7 @@ ln -sf $PWD/config/helix/languages.toml ~/.config/helix/languages.toml
 ln -sf $PWD/config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf
 ln -sf $PWD/config/hypr/hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 ln -sf $PWD/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+ln -sf $PWD/config/kitty/theme.conf ~/.config/kitty/theme.conf
 ln -sf $PWD/config/neofetch/config.conf ~/.config/neofetch/config.conf
 ln -sf $PWD/config/zsh/.zshrc ~/.zshrc
 ln -sf $PWD/config/zsh/themes/gruvbox.zsh-theme ~/.config/zsh/themes/gruvbox.zsh-theme
