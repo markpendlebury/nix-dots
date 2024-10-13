@@ -69,6 +69,10 @@
     enable = true;
   };
 
+  fonts.packages = with pkgs; [
+  ( nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
+
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
