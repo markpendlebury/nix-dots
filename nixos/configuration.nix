@@ -2,17 +2,19 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
     [ 
+      ./nixos.nix
       ./system.nix
       ./desktop.nix
       ./services.nix
       ./applications.nix
-       /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
       ./zsh/default.nix
+      inputs.home-manager.nixosModules.default
     ];
 
 
@@ -42,6 +44,14 @@
       fzf
       git
     ];
+  };
+
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "mpendlebury" = import ./home.nix;
+    };
   };
 
 

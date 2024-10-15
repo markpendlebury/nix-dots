@@ -10,9 +10,8 @@ done
 echo "Done!"
 
 echo "Linking dotfiles..."
-sudo ln -sf $PWD/nixos/configuration.nix /etc/nixos/configuration.nix
-sudo mkdir -p /etc/nixos/zsh
-sudo ln -sf $PWD/nixos/zsh/default.nix /etc/nixos/zsh/default.nix
+sudo mv /etc/nixos /etc/nixos.bak
+sudo ln -s $PWD/nixos /etc/nixos
 ln -sf $PWD/config/btop/btop.conf ~/.config/btop/btop.conf
 ln -sf $PWD/themes/btop/gruvbox.theme ~/.config/btop/themes/gruvbox.theme
 ln -sf $PWD/config/helix/config.toml ~/.config/helix/config.toml
