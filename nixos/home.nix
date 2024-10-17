@@ -56,6 +56,8 @@
     ".config/helix/config.toml".source = ../config/helix/config.toml;
     ".config/helix/languages.toml".source = ../config/helix/languages.toml;
 
+    ".config/hypr/hyprland.conf".source = ../config/hypr/hyprland.conf;
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
