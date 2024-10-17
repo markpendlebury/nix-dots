@@ -63,6 +63,9 @@
 
     ".config/neofetch/config.conf".source = ../config/neofetch/config.conf;
 
+    "~/.zshrc".source = ../zsh/.zshrc;
+    
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
