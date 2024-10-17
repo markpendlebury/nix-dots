@@ -58,6 +58,9 @@
 
     ".config/hypr/hyprland.conf".source = ../config/hypr/hyprland.conf;
 
+    ".config/kitty/kitty.conf".source = ../config/kitty/kitty.conf;
+    ".config/kitty/theme.conf".source = ../config/kitty/kitty.conf;
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
