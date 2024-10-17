@@ -63,8 +63,10 @@
 
     ".config/neofetch/config.conf".source = ../config/neofetch/config.conf;
 
-    "~/.zshrc".source = ../config/zsh/.zshrc;
-    
+    ".zshrc".source = ../config/zsh/.zshrc;
+    ".config/zsh/themes/gruvbox.zsh-theme".source = ../config/zsh/gruvbox.zsh-theme;
+
+# ln -sf $PWD/config/zsh/themes/gruvbox.zsh-theme ~/.config/zsh/themes/gruvbox.zsh-theme
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
