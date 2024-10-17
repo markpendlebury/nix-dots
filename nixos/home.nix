@@ -17,11 +17,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-
+  home.packages = with pkgs; [
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -34,6 +30,12 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    helix
+    btop
+    kitty
+    lazygit
+    neofetch
+    fzf
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -43,6 +45,23 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+
+    ".config/btop/btop.conf".source = ../config/btop/btop.conf;
+    ".config/btop/themes/gruvbox.theme".source = ../config/btop/gruvbox.theme;
+    "config/neofetch/config.conf".source = ../config/neofetch/config.conf;
+
+    ".config/helix/config.toml".source = ../config/helix/config.toml;
+    ".config/helix/languages.toml".source = ../config/helix/languages.toml;
+
+    ".config/hypr/hyprland.conf".source = ../config/hypr/hyprland.conf;
+
+    ".config/kitty/kitty.conf".source = ../config/kitty/kitty.conf;
+    ".config/kitty/theme.conf".source = ../config/kitty/theme.conf;
+
+    ".config/neofetch/config.conf".source = ../config/neofetch/config.conf;
+
+    ".zshrc".source = ../config/zsh/.zshrc;
+    ".config/zsh/themes/gruvbox.zsh-theme".source = ../config/zsh/gruvbox.zsh-theme;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -73,4 +92,13 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+  };
+
+  programs.firefox = {
+    enable = true;
+  };
+  
 }

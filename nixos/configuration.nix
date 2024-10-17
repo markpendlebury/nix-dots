@@ -34,16 +34,7 @@
     description = "Mark Pendlebury";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    # shell = pkgs.bash;
-    packages = with pkgs; [
-      helix
-      btop
-      kitty
-      lazygit
-      neofetch
-      fzf
-      git
-    ];
+    packages = with pkgs; [];
   };
 
 
