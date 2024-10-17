@@ -53,6 +53,9 @@
     ".config/btop/themes/gruvbox.theme".source = ../config/btop/gruvbox.theme;
     "config/neofetch/config.conf".source = ../config/neofetch/config.conf;
 
+    ".config/helix/config.toml".source = ../config/helix/config.toml;
+    ".config/helix/languages.toml".source = ../config/helix/languages.toml;
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
