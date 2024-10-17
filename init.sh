@@ -16,4 +16,6 @@ mkdir -p ~/.scripts/non-exec
 ln -sf $PWD/scripts/aliases ~/.scripts/aliases
 ln -sf $PWD/scripts/terraform ~/.scripts/terraform
 
+sudo nixos-rebuild switch
+
 echo "Done!"
