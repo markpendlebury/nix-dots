@@ -17,10 +17,9 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    # pkgs.hello
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -34,6 +33,12 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    helix
+    btop
+    kitty
+    lazygit
+    neofetch
+    fzf
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -43,6 +48,10 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+
+    ".config/btop/btop.conf".source = ../config/btop/btop.conf;
+    ".config/btop/themes/gruvbox.theme".source = ../config/btop/gruvbox.theme;
+    "config/neofetch/config.conf".source = ../config/neofetch/config.conf;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -73,4 +82,13 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+  };
+
+  programs.firefox = {
+    enable = true;
+  };
+  
 }
