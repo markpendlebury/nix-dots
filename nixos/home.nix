@@ -2,6 +2,13 @@
 
 {
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
+
   imports = [
     ./firefox.nix
   ];
@@ -42,6 +49,7 @@
     neofetch
     fzf
     networkmanager
+    obsidian
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
