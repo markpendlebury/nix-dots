@@ -77,7 +77,7 @@
     ".zshrc".source = ../config/zsh/.zshrc;
     ".config/zsh/themes/gruvbox.zsh-theme".source = ../config/zsh/gruvbox.zsh-theme;
 
-    ".icons/Gruvbox-Dark".source = ../confiig/gtk/Gruvbox/icons;
+    ".icons/Gruvbox-Dark".source = ../config/gtk/Gruvbox/icons;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
