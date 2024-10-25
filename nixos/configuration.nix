@@ -12,6 +12,7 @@
       ./desktop.nix
       ./services.nix
       ./applications.nix
+      ./thunar.nix
       ./hardware-configuration.nix
       ./zsh/default.nix
       inputs.home-manager.nixosModules.default
