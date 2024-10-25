@@ -12,6 +12,8 @@
   imports = [
     ./firefox.nix
     ./waybar.nix
+    ./vscode.nix
+    ./wofi.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -80,6 +82,8 @@
     ".config/zsh/themes/gruvbox.zsh-theme".source = ../config/zsh/gruvbox.zsh-theme;
 
     ".icons/Gruvbox-Dark".source = ../config/gtk/Gruvbox/icons;
+
+    # ".config/wofi/style.css".source = ../config/wofi/gruvbox.css;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
