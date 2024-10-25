@@ -114,5 +114,4 @@
   programs.git = {
     enable = true;
   };
-
 }

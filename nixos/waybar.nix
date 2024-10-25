@@ -1,9 +1,6 @@
 { config, pkgs, ... }: 
 
 {
-  programs = {
-    waybar = {
-      enabled = true
-    };
-  };  
+  programs.waybar = {
+    enable = true;
 }
