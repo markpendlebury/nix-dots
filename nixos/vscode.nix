@@ -1,7 +1,7 @@
 { config, pkgs, ... }: 
-
 {
-  programs.waybar = {
+
+  programs.vscode = {
     enable = true;
   };
 }
