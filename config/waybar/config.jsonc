@@ -4,7 +4,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/arrow3",
-        "hyprland/window"
     ],
     "modules-center": [
         "custom/weather",
