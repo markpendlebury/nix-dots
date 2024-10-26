@@ -230,7 +230,7 @@
 
 #custom-arrow3 {
     font-size: 2em;
-    color: @font_dark_alternative;
+    color: @bluetint;
     background: @bg;
 }
 
@@ -316,7 +316,7 @@
 #workspaces {}
 
 #workspaces button {
-    background: @font_dark_alternative;
+    background: @bluetint;
     padding: 0em 1.2em;
     color: @font_gruv_normal;
     min-width: 0em;

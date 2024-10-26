@@ -1,35 +1,27 @@
 {
-    "output": "DP-1",
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    // "height": 36, // Waybar height (to be removed for auto height)
-    // Archived modules
-    // "custom/gpu",  "custom/weather","sway/window", "custom/gpu",  "custom/media",  
-    // Choose the order of the modules
     "modules-left": [
-        "custom/arrow1",
-        "custom/pacman",
-        "custom/arrow2",
         "hyprland/workspaces",
         "custom/arrow3",
         "hyprland/window"
     ],
     "modules-center": [
-        // "custom/weather",
+        "custom/weather",
         "clock#date",
         "clock#time"
     ],
     "modules-right": [
-        "custom/arrow7",
-        "temperature",
-        "cpu",
-        "custom/gpu",
-        "custom/arrow8",
         "network",
         "battery",
         "bluetooth",
         "pulseaudio",
-        "tray"
+        "tray",
+        "custom/arrow7",
+        "temperature",
+        "cpu",
+        "custom/gpu"
+        // "custom/arrow8",
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -142,16 +134,6 @@
         },
         "on-click": "pavucontrol",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-    },
-    "custom/pacman": {
-        "format": "<big>󰚰</big>  {}",
-        "interval": 3600, // every hour
-        "exec": "checkupdates | wc -l", // # of updates
-        "exec-if": "exit 0", // always run; consider advanced run conditions
-        "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
-        "signal": 8,
-        "max-length": 5,
-        "min-length": 3
     },
     "custom/weather": {
         "exec": "curl 'https://wttr.in/?format=1'",
