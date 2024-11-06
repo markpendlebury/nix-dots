@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
-
+let
+  gruvboxPlus = import ./gruvbox-plus.nix { inherit pkgs; };
+in
 {
 
   nixpkgs = {
@@ -53,6 +55,8 @@
     fzf
     networkmanager
     obsidian
+    gtk-engine-murrine
+    gnome-themes-extra
     ];
 
 
@@ -66,6 +70,7 @@
 
     ".config/btop/btop.conf".source = ../config/btop/btop.conf;
     ".config/btop/themes/gruvbox.theme".source = ../config/btop/gruvbox.theme;
+
     "config/neofetch/config.conf".source = ../config/neofetch/config.conf;
 
     ".config/helix/config.toml".source = ../config/helix/config.toml;
@@ -80,10 +85,6 @@
 
     ".zshrc".source = ../config/zsh/.zshrc;
     ".config/zsh/themes/gruvbox.zsh-theme".source = ../config/zsh/gruvbox.zsh-theme;
-
-    ".icons/Gruvbox-Dark".source = ../config/gtk/Gruvbox/icons;
-
-    # ".config/wofi/style.css".source = ../config/wofi/gruvbox.css;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -118,4 +119,27 @@
   programs.git = {
     enable = true;
   };
+
+
+  gtk = {
+    enable = true;
+
+    cursorTheme = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Mordern-Ice";  
+    };
+
+    theme = {
+      package = pkgs.gruvbox-gtk-theme;
+      name = "gruvbox-gtk-theme";
+    };
+
+    iconTheme = {
+      package = gruvboxPlus;
+      name = "gruvboxplus";
+    };
+  };
+
+    
+    
 }
